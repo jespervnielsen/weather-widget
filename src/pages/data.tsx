@@ -7,8 +7,8 @@ function dataPage({ data }) {
     <div>
       <h1>Data</h1>
       <ul>
-        {data.map((product) => (
-          <li key={product.id}>{product.name}</li>
+        {data.map((data) => (
+          <li key={data.id}>{data.name}</li>
         ))}
       </ul>
     </div>
