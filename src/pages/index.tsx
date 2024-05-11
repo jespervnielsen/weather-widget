@@ -1,22 +1,16 @@
-// pages/index.tsx
 import React from 'react';
 import { GetServerSideProps } from 'next';
 import WeatherWidget from '../components/WeatherWidget';
 import { fetchWeather } from '../utils/fetchWeather';
 
-
-
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const city = context.query.city || 'Copenhagen';
-//   console.log('city:', city);
-  const weatherData = await fetchWeather(city);
-//   console.log('weatherData:', weatherData);
-  return { props: { weatherData } };
+  const initialWeatherData = await fetchWeather(city);
+  return { props: { initialWeatherData } };
 };
 
-const Home: React.FC<{ weatherData: any }> = ({ weatherData }) => {
-	// console.log('weatherData:', weatherData);
-	return <WeatherWidget weatherData={weatherData} />;
-  };
+const Home: React.FC<{ initialWeatherData: any }> = ({ initialWeatherData }) => {
+	return <WeatherWidget initialWeatherData={initialWeatherData} />;
+};
 
 export default Home;

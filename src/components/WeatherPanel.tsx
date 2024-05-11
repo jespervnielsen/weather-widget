@@ -1,3 +1,4 @@
+// components/WeatherPanel.tsx
 import React from 'react';
 
 interface WeatherPanelProps {
