@@ -1,0 +1,30 @@
+.panel {
+  /* border: 1px solid #ddd; */
+  /* border-radius: 4px; */
+  /* padding: 10px; */
+  /* background-color: #f9f9f9; */
+}
+
+.title {
+	font-size: 1.0em;
+	background-color: #CCe8FF;
+	padding: 10px;
+	border-bottom: 1px solid lightgray
+}
+
+.panelInfo {
+  /* color: #31708f; */
+  /* backgrounds-color: #d9edf7; */
+  /* border-color: #bce8f1; */
+}
+
+.list {
+	padding: 0;
+    list-style-type: none;
+	margin: 0;
+}
+
+.listItem {
+    padding: 5px 10px;
+    border-bottom: 1px solid lightgray
+}

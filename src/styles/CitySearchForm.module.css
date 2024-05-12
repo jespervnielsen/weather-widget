@@ -1,0 +1,27 @@
+.citySearchForm {
+  padding: 10px;
+}
+
+.inputCity {
+	padding: 5px 10px;
+	color: black;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	margin-right: 5px;
+	width: 60%;
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.inputCity::placeholder {
+	color: darkgray;
+}
+
+.submitSearch {
+	padding: 5px 10px;
+	color: black;
+	background-color: white;
+	border: 1px solid lightgray;
+	border-radius: 5px;
+	cursor: pointer;
+}
