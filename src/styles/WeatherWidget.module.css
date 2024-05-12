@@ -1,0 +1,13 @@
+.widget {
+  /* padding: s20px; */
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius:var(--default-border-radius);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.error {
+  background: #ffa0a0;
+  padding: 10px;
+}

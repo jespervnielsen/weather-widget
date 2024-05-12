@@ -1,0 +1,13 @@
+version: '3.8'
+services:
+  nextjs-app:
+    build:
+      context: ../  # This now points to the project root directory
+      dockerfile: ./docker/Dockerfile  # Path to the Dockerfile from the context directory
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ../:/app  # Ensure this maps the entire project into /app inside the container
+    command: npm run start

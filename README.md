@@ -1,36 +1,87 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weather Widget
+
+## Overview
+
+The **Weather Widget** is a [Next.js-based](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) web application designed to provide near real-time weather information.
+
+
+## Prerequisites
+
+Before you begin, ensure you have the following installed:
+- **Docker** and **Docker Compose**: For containerization
+- **Node.js**: This project uses Node.js version **22**. Make sure this version is installed on your system, if you want to run directly without docker
 
 ## Getting Started
 
-First, run the development server:
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Installation
+
+1. **Clone the repository:**
+
+   Clone this repository to your local machine using the following command:
+
+   ```bash
+	git clone https://github.com/your-username/weather-widget.git
+	```
+
+2. **Navigate to the project directory:**
+
+	```bash
+	cd weather-widget
+	```
+
+## Configuration
+
+### API Key
+
+The Weather Widget uses the OpenWeatherMap API to fetch weather data. To run this project, you'll need an API key from OpenWeatherMap:
+
+1. Visit [OpenWeatherMap](https://openweathermap.org/api) and sign up for an account.
+2. Follow the instructions to subscribe to an API plan that suits your needs (the free plan usually suffices for development purposes).
+3. Once you have your API key, create a file named `.env.local` in the root directory of this project.
+4. Add your API key to this file like so:
+
+   ```plaintext
+   OPEN_WEATHER_MAP_API_KEY=your_api_key_here
+   ```
+
+## Running the Application with Docker Compose
+1. **Build and run the Docker container:**
+To start the application using Docker Compose, follow these steps:
+	```bash
+	docker-compose -f docker/docker-compose.yml up --build
+	```
+
+2. **Access the application:**
+After the containers are up and running, you can access the Weather Widget at http://localhost:3000 from your web browser.
+
+
+## Running the application with NPM
 
 ```bash
+# start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Build for production
+npm run build
+# start production server
+npm run start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+you can access the Weather Widget at http://localhost:3000 from your web browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Running Tests
+To run the unit tests for the application, execute the following command in the project root:
+```bash
+npm run test
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Notes
+- The basic functionality of the widget, works without having javascript enabled in the browser. But when running development mode, the styles wont be injected, unless javascript is enabled.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Roadmap
+- Typeahead search on city search
+- Ask the user to "use my city" using the geolocation API in browser
+- Setup Commit Linting
+- Setup deployments
+- Setup linting in pipelines
