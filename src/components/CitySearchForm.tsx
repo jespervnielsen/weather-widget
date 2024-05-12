@@ -1,4 +1,16 @@
 // components/CitySearchForm.tsx
+/**
+ * CitySearchForm Component
+ *
+ * This component allows users to input a city name and trigger a callback to fetch weather data for that city.
+ * It also updates the query parameter in the URL with the entered city name.
+ *
+ * @param {object} props - Props passed to the component.
+ * @param {(city: string) => void} props.onCityChange - Callback triggered on city change submission.
+ *
+ * @returns JSX.Element representing a form for city search.
+ */
+
 import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 import styles from '../styles/CitySearchForm.module.css';
@@ -16,8 +28,6 @@ const CitySearchForm: React.FC<CitySearchFormProps> = ({ onCityChange }) => {
     event.preventDefault();
 	const lowercaseCity = city.toLowerCase();
     onCityChange(lowercaseCity);
-	// Update the URL without refreshing the page
-    // router.push(`/?city=${encodeURIComponent(lowercaseCity)}`, undefined, { shallow: true });
 	router.push({
 		pathname: '/',
 		query: { city: lowercaseCity },

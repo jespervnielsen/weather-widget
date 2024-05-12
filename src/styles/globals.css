@@ -5,15 +5,11 @@
 
   /* Colors */
   --color-primary: #0070f3;
-  --color-placeholder: lightgray
-
-  /* Spacing */
+  --color-placeholder: lightgray;
 
   /* Borders */
-  --default-border: 1px solid var(--color-borders);
   --default-border-width: 1px;
   --default-border-style: solid;
   --default-border-color: lightgray;
-  --default-border-color: red;
   --default-border-radius: 5px;
 }
