@@ -4,7 +4,7 @@ import WeatherWidget from '../components/WeatherWidget';
 import { fetchWeather } from '../utils/fetchWeather';
 
 import 'normalize.css';
-import '../styles/globals.css';
+// import '../styles/globals.css';
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const city = context.query.city as string;  // Capture city or undefined
