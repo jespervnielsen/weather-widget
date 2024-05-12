@@ -17,7 +17,7 @@ interface WeatherPanelProps {
 }
 
 const WeatherPanel: React.FC<WeatherPanelProps> = ({ weatherData }) => {
-	console.log('weatherData:', weatherData);
+	// console.log('weatherData:', weatherData);
 
   const getWindDirection = (degrees: number) => {
     const directions = ['North', 'North East', 'East', 'South East', 'South', 'South West', 'West', 'North West'];
@@ -32,13 +32,13 @@ const WeatherPanel: React.FC<WeatherPanelProps> = ({ weatherData }) => {
       </div>
       <ul className={styles.list}>
         <li className={styles.listItem}>
-          Temperature: <b>{weatherData ? `${Math.round(weatherData.main.temp)}°C` : '...'}</b>
+          Temperature: <b>{weatherData?.main?.temp ? `${Math.round(weatherData.main.temp)}°C` : '...'}</b>
         </li>
         <li className={styles.listItem}>
-          Humidity: <b>{weatherData ? `${weatherData.main.humidity}%` : '...'}</b>
+          Humidity: <b>{weatherData?.main?.humidity ? `${weatherData.main.humidity}%` : '...'}</b>
         </li>
         <li className={styles.listItem}>
-          Wind: <b>{weatherData ? `${Math.round(weatherData.wind.speed )} m/s ${getWindDirection(weatherData.wind.deg)}` : '...'}</b>
+          Wind: <b>{(weatherData?.wind?.speed && weatherData?.wind?.deg ) ? `${Math.round(weatherData.wind.speed )} m/s ${getWindDirection(weatherData.wind.deg)}` : '...'}</b>
         </li>
       </ul>
     </div>

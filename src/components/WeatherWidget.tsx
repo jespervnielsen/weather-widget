@@ -19,7 +19,13 @@ interface WeatherWidgetProps {
 
   const handleCityChange = async (city: string) => {
     try {
-      const data = await fetchWeather(city);
+	const response  = await fetch(`/api/OpenWeatherProxy?city=${city}`,
+		{
+		next: { revalidate: 600 },
+	  });
+	const data = await response.json(); // This parses the JSON body from the response
+	//   console.log('handleCityChange:', data);
+    //   const data = await fetchWeather(city);
       if (data.cod === "404") {
         setError("City not found. Please try another.");
         setWeatherData(null);

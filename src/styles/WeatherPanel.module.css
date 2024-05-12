@@ -9,7 +9,7 @@
 	font-size: 1.0em;
 	background-color: #CCe8FF;
 	padding: 10px;
-	border-bottom: 1px solid lightgray
+	border-bottom: var(--default-border-width) var(--default-border-style) var(--default-border-color);
 }
 
 .panelInfo {
@@ -26,5 +26,5 @@
 
 .listItem {
     padding: 5px 10px;
-    border-bottom: 1px solid lightgray
+	border-bottom: var(--default-border-width) var(--default-border-style) var(--default-border-color);
 }

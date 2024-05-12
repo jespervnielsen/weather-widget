@@ -1,5 +1,6 @@
 // tests/WeatherPanel.test.js
 import React from 'react';
+import {describe, expect, test} from '@jest/globals';
 import { render, screen } from '@testing-library/react';
 import WeatherPanel from '../../../src/components/WeatherPanel';
 

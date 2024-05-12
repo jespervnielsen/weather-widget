@@ -5,8 +5,8 @@
 .inputCity {
 	padding: 5px 10px;
 	color: black;
-	border: 1px solid lightgray;
-	border-radius: 5px;
+	border: var(--default-border-width) var(--default-border-style) var(--default-border-color);
+	border-radius: var(--default-border-radius);
 	margin-right: 5px;
 	width: 60%;
     min-width: 100px;
@@ -14,14 +14,14 @@
 }
 
 .inputCity::placeholder {
-	color: darkgray;
+	color: var(--color-placeholder);
 }
 
 .submitSearch {
 	padding: 5px 10px;
 	color: black;
 	background-color: white;
-	border: 1px solid lightgray;
-	border-radius: 5px;
+	border: var(--default-border-width) var(--default-border-style) var(--default-border-color);
+	border-radius: var(--default-border-radius);
 	cursor: pointer;
 }

@@ -1,5 +1,6 @@
 // tests/unit/components/CitySearchForm.test.js
 import React from 'react';
+import {describe, expect, test} from '@jest/globals';
 import { render, screen, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom'; // for .toBeInTheDocument()
 import CitySearchForm from '../../../src/components/CitySearchForm';
