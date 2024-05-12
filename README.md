@@ -22,7 +22,7 @@ These instructions will get you a copy of the project up and running on your loc
    Clone this repository to your local machine using the following command:
 
    ```bash
-	git clone https://github.com/your-username/weather-widget.git
+	git clone https://github.com/jespervnielsen/weather-widget.git
 	```
 
 2. **Navigate to the project directory:**
