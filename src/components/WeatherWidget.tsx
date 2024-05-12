@@ -1,7 +1,17 @@
+// components/WeatherWidget.tsx
+/**
+ * Main weather widget that includes a weather panel and city search form.
+ * Handles updating weather data based on the user's city search.
+ *
+ * @param {object} props - Component properties.
+ * @param {any} props.initialWeatherData - Initial weather data to display.
+ * @param {string | null} [props.initialError=null] - Initial error message, if any.
+ * @returns {JSX.Element} The weather widget UI.
+ */
+
 import React, { useState } from 'react';
 import WeatherPanel from './WeatherPanel';
 import CitySearchForm from './CitySearchForm';
-import { fetchWeather } from '../utils/fetchWeather';
 import styles from '../styles/WeatherWidget.module.css';
 
 interface WeatherWidgetProps {
@@ -23,9 +33,8 @@ interface WeatherWidgetProps {
 		{
 		next: { revalidate: 600 },
 	  });
-	const data = await response.json(); // This parses the JSON body from the response
-	//   console.log('handleCityChange:', data);
-    //   const data = await fetchWeather(city);
+	const data = await response.json();
+
       if (data.cod === "404") {
         setError("City not found. Please try another.");
         setWeatherData(null);

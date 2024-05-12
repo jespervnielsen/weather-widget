@@ -1,4 +1,12 @@
 // components/WeatherPanel.tsx
+/**
+ * Displays a weather information panel for a given location, including temperature,
+ * humidity, and wind speed/direction.
+ *
+ * @param {object} props - Component properties.
+ * @param {object | null} props.weatherData - Weather data or `null` if unavailable.
+ * @returns {JSX.Element} A panel showing weather details.
+ */
 import React from 'react';
 import styles from '../styles/WeatherPanel.module.css';
 
@@ -17,8 +25,8 @@ interface WeatherPanelProps {
 }
 
 const WeatherPanel: React.FC<WeatherPanelProps> = ({ weatherData }) => {
-	// console.log('weatherData:', weatherData);
 
+  // Converts wind direction in degrees to a cardinal direction.
   const getWindDirection = (degrees: number) => {
     const directions = ['North', 'North East', 'East', 'South East', 'South', 'South West', 'West', 'North West'];
     const index = Math.round(degrees / 45) % 8;

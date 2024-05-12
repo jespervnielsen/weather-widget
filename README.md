@@ -85,3 +85,4 @@ npm run test
 - Setup Commit Linting
 - Setup deployments
 - Setup linting in pipelines
+- Cache strategies (Fx Redis or Full proxy cache)
